@@ -17,5 +17,6 @@ RUN git clone https://github.com/altexdim/sourcemod-plugin-gungame.git /tmp/gung
 RUN rm -rf /tmp/gungamefiles/README.md /tmp/gungamefiles/.git
 RUN rsync --remove-source-files -a /tmp/gungamefiles/ /game/
 RUN rm -rf /tmp/gungamefiles
+RUN apt-get clean -y && apt-get autoremove -y
 
 ENTRYPOINT [ "./srcds_run", "-console", "-game", "cstrike", "+map", "de_dust", "-maxplayers", "16" ]
