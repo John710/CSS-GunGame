@@ -19,4 +19,3 @@ RUN rsync --remove-source-files -a /tmp/gungamefiles/ /game/
 RUN rm -rf /tmp/gungamefiles
 
 ENTRYPOINT [ "./srcds_run", "-console", "-game", "cstrike", "+map", "de_dust", "-maxplayers", "16" ]
-# ENTRYPOINT [ "ls", "-lar", "/game" ]
