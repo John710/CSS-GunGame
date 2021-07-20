@@ -5,7 +5,7 @@ WORKDIR /game
 RUN apt-get update && apt-get install -y git rsync
 
 RUN steamcmd +login anonymous +force_install_dir /game +app_update 232330 validate +exit
-COPY ./server.cfg /game/server.cfg
+COPY ./server.cfg /game/cfg/server.cfg
 EXPOSE 27015
 
 ADD https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1145-linux.tar.gz /tmp/mmsource.tar.gz
