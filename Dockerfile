@@ -4,7 +4,7 @@ WORKDIR /game
 EXPOSE 27015
 
 RUN apt-get update && apt-get install -y git rsync
-COPY ./server.cfg /game/cfg/server.cfg
+COPY ./server.cfg /game/server.cfg
 COPY ./maps.zip /game/maps.zip
 COPY ./start.sh /game/start.sh
 RUN chmod +x /game/start.sh
