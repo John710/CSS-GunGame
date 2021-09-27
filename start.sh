@@ -15,4 +15,4 @@ if [ ! -f ".installed" ]; then
 
     touch .installed
 fi
-/game/srcds_run -console -game cstrike +map de_dust -maxplayers 16
+/game/srcds_run -console -game cstrike +map de_dust -maxplayers 16 +servercfgfile server.cfg
