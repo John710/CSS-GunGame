@@ -14,4 +14,4 @@ RUN chown -R steam:steam /home/steam/server/maps
 
 USER steam
 
-RUN ls /home/steam/server/maps -1 | sed 's/\(.*\)\..*/\1/' | sort | uniq > /home/steam/server/cstrike/cfg/mapcycle.txt
+RUN ls /home/steam/server/maps -1 | sed 's/\(.*\)\..bsp/\1/' | sort | uniq > /home/steam/server/cstrike/cfg/mapcycle.txt
