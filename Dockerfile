@@ -1,13 +1,6 @@
-FROM steamcmd/steamcmd:latest
+FROM threesquared/docker-css-server-gungame-turbo:latest
 
-WORKDIR /game
 EXPOSE 27015
+EXPOSE 27005
 
-RUN apt-get update && apt-get install -y git rsync wget nano
-COPY ./server.cfg /game/cstrike/cfg/server.cfg
-COPY ./maps.zip /game/maps.zip
-COPY ./start.sh /game/start.sh
-RUN chmod +x /game/start.sh
-RUN apt-get clean -y && apt-get autoremove -y
-
-ENTRYPOINT [ "/game/start.sh" ]
+ADD server.cfg /home/steam/server/cstrike/cfg/server.cfg
